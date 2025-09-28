@@ -1,151 +1,393 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anna Ruvolo Fashion Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 0;
-      background-color: white;
-      color: black;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Ruvolo Fashion Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      z-index: 1000;
-    }
-    nav .logo {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #e5c29b;
-    }
+  <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src='https://connect.facebook.net/en_US/fbevents.js';
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script');
+ 
+  fbq('init', '1233899018449480'); // ← Il tuo ID Pixel
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1233899018449480&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
-    /* Spazio sotto la navbar */
-    .container {
-      margin-top: 120px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 20px;
-      text-align: center;
-    }
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-    .inspirational-text {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #333;
-    }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .contact-form {
-      margin-top: 20px;
-      padding: 20px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      border: 1px solid #e5c29b;
-      text-align: left;
-    }
-    input, select, textarea, button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-    button {
-      background-color: black;
-      color: #e5c29b;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #444;
-    }
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-    .portfolio-button {
-      display: inline-block;
-      padding: 15px 30px;
-      margin-top: 20px;
-      background-color: black;
-      color: #e5c29b;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .portfolio-button:hover {
-      background-color: #444;
-    }
+        .contact-form {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 1px solid #e5c29b; /* Bordo color champagne */
+        }
 
-    .social-buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .social-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: black;
-      color: #e5c29b;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .social-button:hover {
-      background-color: #444;
-    }
+        input, select, textarea, button {
+            width: 100%;
+            max-width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-    }
+        }
 
-    .hidden {
-      display: none;
-    }
-  </style>
+        button {
+            background-color: black;
+            color: #e5c29b;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .logo {
+            max-width: 125px;
+            cursor: pointer;
+        }
+
+        .inspirational-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-button {
+            display: inline-block;
+            padding: 10px;
+            background-color: black;
+            color: #e5c29b;
+text-decoration: none;
+            font-size: 18px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border-color 0.3s ease, color 0.3s ease;
+
+        }
+
+        .social-button img {
+            width: 30px; /* Immagini dei social ridotte */
+            height: 30px;
+        }
+
+        .social-button:hover {
+            color: #e5c29b;
+            border-color: #e5c29b;
+
+        }
+
+.portfolio-button {
+display: inline-block;
+padding: 15px 30px;
+margin-top: 10px;
+background-color: black;
+color: #e5c29b;
+font-size: 18px;
+text-decoration: none;
+border-radius: 5px;
+border: 2px solid transparent;
+transition: all 0.3s ease;
+}
+
+.portfolio-button:hover {
+background-color: #444;
+border-color: #e5c29b;
+}
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border: 2px solid #e5c29b; /* Cambia il bordo a champagne quando il campo è attivo */
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showEventForm() {
+            const eventType = document.getElementById('event-type').value;
+            const serviceSelection = document.getElementById('service-selection');
+            const matrimonioRoleForm = document.getElementById('matrimonio-role-form');
+            const serviceForm = document.getElementById('service-form');
+
+            serviceSelection.classList.add('hidden');
+            matrimonioRoleForm.classList.add('hidden');
+           
+            if (eventType === 'matrimonio') {
+                matrimonioRoleForm.classList.remove('hidden');
+            } else {
+                serviceSelection.classList.remove('hidden');
+            }
+        }
+
+        function showRoleAndService() {
+            const role = document.getElementById('matrimonio-role').value;
+            const serviceSelection = document.getElementById('service-selection');
+            const serviceForm = document.getElementById('service-form');
+
+            if (role !== "seleziona-ruolo") {
+                serviceSelection.classList.remove('hidden');
+            }
+        }
+
+        function showServiceForm() {
+            const selectedService = document.getElementById('service').value;
+            const abitoSuMisuraForm = document.getElementById('abito-su-misura-form');
+            const abitoTagliaForm = document.getElementById('abito-in-taglia-form');
+            const riparazioniForm = document.getElementById('riparazione-form');
+           
+            abitoSuMisuraForm.classList.add('hidden');
+            abitoTagliaForm.classList.add('hidden');
+            riparazioniForm.classList.add('hidden');
+
+            if (selectedService === 'abito-su-misura') {
+                abitoSuMisuraForm.classList.remove('hidden');
+            } else if (selectedService === 'abito-in-taglia') {
+                abitoTagliaForm.classList.remove('hidden');
+            } else if (selectedService === 'riparazione') {
+                riparazioniForm.classList.remove('hidden');
+            }
+        }
+
+        function sendWhatsApp() {
+            let name = document.getElementById('name').value;
+            let surname = document.getElementById('surname').value;
+            let phone = document.getElementById('phone').value;
+            let age = document.getElementById('age').value;
+            let country = document.getElementById('country').value;
+            let eventDate = document.getElementById('event-date').value;
+            let eventType = document.getElementById('event-type').value;
+            let role = document.getElementById('matrimonio-role') ? document.getElementById('matrimonio-role').value : '';
+            let service = document.getElementById('service').value;
+            let message = `Salve, mi chiamo ${name} ${surname}.\n`;
+            message += `Età: ${age}\n`;
+            message += `Resido a: ${country}\n`;
+            message += `Data dell'evento: ${eventDate}\n`;
+            message += `Tipo di evento: ${eventType}\n`;
+
+            if (eventType === 'matrimonio') {
+                message += `Ruolo Matrimonio: ${role}\n`;
+            }
+
+            message += `Questo è il mio numero di telefono per chiarimenti: ${phone}.\n`;
+            message += `Vorrei un preventivo per il servizio: ${service}.\n`;
+
+            if (service === 'riparazione') {
+                let type = document.getElementById('repair-type').value;
+                let details = document.getElementById('repair-details').value;
+                message += `Tipo di riparazione: ${type}.\nDettagli: ${details}\n`;
+            } else if (service === 'abito-su-misura' || service === 'abito-in-taglia') {
+                let height = document.getElementById('height').value;
+                let size = document.getElementById('size').value;
+                let description = document.getElementById('description').value;
+                message += `Altezza cliente: ${height} cm\nTaglia: ${size}\nDescrizione: ${description}\n`;
+            }
+
+            let whatsappUrl = `https://wa.me/393408936244?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Traccia click su link email
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        fbq('track', 'Contact', {
+          contactType: 'email',
+          contactValue: link.getAttribute('href')
+        });
+      });
+    });
+
+    // Traccia click su link telefono
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+      link.addEventListener("click", function () {
+        fbq('track', 'Contact', {
+          contactType: 'phone',
+          contactValue: link.getAttribute('href')
+        });
+      });
+    });
+  });
+</script>
+
+
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <a href="index.html" class="logo">Anna Ruvolo Fashion Designer</a>
-    <ul>
-      <li><a href="i
+  !-- INIZIO NAVBAR -->
+<nav style="background-color: black; color: #e5c29b; padding: 15px;">
+    <div class="logo" style="display:inline-block; cursor:pointer;" onclick="window.location.href='index.html'">
+        Anna Ruvolo Fashion Designer
+    </div>
+    <ul style="display:inline-block; list-style:none; margin:0; padding:0; float:right;">
+        <li style="display:inline; margin-left:20px;"><a href="shooting.html" style="color:#e5c29b; text-decoration:none;">Shooting</a></li>
+        <li style="display:inline; margin-left:20px;"><a href="shop.html" style="color:#e5c29b; text-decoration:none;">Shop</a></li>
+        <li style="display:inline; margin-left:20px;"><a href="corsi.html" style="color:#e5c29b; text-decoration:none;">Corsi</a></li>
+        <li style="display:inline; margin-left:20px;"><a href="chi-sono.html" style="color:#e5c29b; text-decoration:none;">Chi sono</a></li>
+    </ul>
+</nav>
+<!-- FINE NAVBAR -->
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/AnnaRuvoloFashionDesigner/sitoV1/refs/heads/main/logov1.png" alt="Anna Ruvolo Fashion Designer" class="logo" onclick="window.location.href='index.html'">
+        <p class="inspirational-text">L’eleganza su misura per il tuo giorno speciale</p>
+       
+        <div class="contact-form">
+            <input type="text" id="name" placeholder="Nome" required>
+            <input type="text" id="surname" placeholder="Cognome" required>
+            <input type="tel" id="phone" placeholder="Numero di telefono" required>
+            <input type="number" id="age" placeholder="Età" required>
+            <input type="text" id="country" placeholder="Paese di residenza / Città" required>
+            <div style="position: relative;">
+                <span id="date-placeholder" class="date-placeholder">Data evento</span>
+                <input type="date" id="event-date" required onfocus="toggleDatePlaceholder()" onblur="toggleDatePlaceholder()" onchange="toggleDatePlaceholder()">
+            </div>
+            <select id="event-type" onchange="showEventForm()" required>
+                <option value="" disabled selected>Tipologia evento</option>
+                <option value="matrimonio">Matrimonio</option>
+                <option value="laurea">Laurea</option>
+                <option value="formale">Formale</option>
+                <option value="18esimo">18esimo</option>
+                <option value="da-tutti-i-giorni">Da tutti i giorni</option>
+                <option value="festa-serale">Festa serale</option>
+            </select>
+        </div>
+
+        <!-- Ruolo Matrimonio (visibile solo se Matrimonio è selezionato) -->
+        <div id="matrimonio-role-form" class="contact-form hidden">
+            <h2>Ruolo al Matrimonio</h2>
+            <select id="matrimonio-role" onchange="showRoleAndService()" required>
+                <option value="seleziona-ruolo" disabled selected>Seleziona ruolo</option>
+                <option value="invitata">Invitata</option>
+                <option value="testimone">Testimone</option>
+                <option value="sposa">Sposa</option>
+                <option value="damina">Damigella</option>
+            </select>
+        </div>
+
+        <!-- Seleziona il Servizio -->
+        <div id="service-selection" class="contact-form hidden">
+            <h2>Seleziona il Servizio</h2>
+            <select id="service" onchange="showServiceForm()" required>
+                <option value="" disabled selected>Seleziona un servizio</option>
+                <option value="abito-su-misura">Abito su misura</option>
+                <option value="abito-in-taglia">Abito in taglia</option>
+                <option value="riparazione">Riparazioni sartoriali</option>
+            </select>
+        </div>
+
+        <div id="abito-su-misura-form" class="contact-form service-form hidden">
+            <h2>Abito su misura</h2>
+            <input type="number" id="height" placeholder="Altezza cliente (cm)" required>
+            <select id="size" required>
+                <option value="" disabled selected>Seleziona la taglia</option>
+                <option value="38">Taglia 38 (seno 80cm,vita 60cm, bacino 86cm)</option>
+                <option value="40">Taglia 40 (seno 84cm, vita 64cm, bacino 90cm)</option>
+                <option value="42">Taglia 42 (seno 88cm, vita 68cm, bacino 94cm)</option>
+                <option value="44">Taglia 44 (seno 92cm, vita 72cm, bacino 98cm)</option>
+                <option value="46">Taglia 46 (seno 96cm,vita 76cm, bacino 102cm)</option>
+                <option value="48">Taglia 48 (seno100cm,vita 80cm, bacino 106cm)</option>
+                <option value="50">Taglia 50 (seno 104cm,vita 84cm, bacino 110cm)</option>
+            </select>
+            <textarea id="description" placeholder="Descrizione dettagliata dell'abito, idea o spiegazione, particolarità fisiche ecc..." rows="4"></textarea>
+            <button onclick="sendWhatsApp()">Invia Richiesta su WhatsApp</button>
+        </div>
+
+        <div id="abito-in-taglia-form" class="contact-form service-form hidden">
+            <h2>Abito in taglia</h2>
+            <input type="number" id="height" placeholder="Altezza cliente (cm)" required>
+            <select id="size" required>
+                <option value="" disabled selected>Seleziona la taglia</option>
+                <option value="38">Taglia 38 (seno 80cm,vita 60cm, bacino 86cm)</option>
+                <option value="40">Taglia 40 (seno 84cm, vita 64cm, bacino 90cm)</option>
+                <option value="42">Taglia 42 (seno 88cm, vita 68cm, bacino 94cm)</option>
+                <option value="44">Taglia 44 (seno 92cm, vita 72cm, bacino 98cm)</option>
+                <option value="46">Taglia 46 (seno 96cm,vita 76cm, bacino 102cm)</option>
+                <option value="48">Taglia 48 (seno100cm,vita 80cm, bacino 106cm)</option>
+                <option value="50">Taglia 50 (seno 104cm,vita 84cm, bacino 110cm)</option>
+            </select>
+            <button onclick="sendWhatsApp()">Invia Richiesta su WhatsApp</button>
+        </div>
+
+        <div id="riparazione-form" class="contact-form service-form hidden">
+            <h2>Riparazioni sartoriali</h2>
+            <select id="repair-type" required>
+                <option value="cucitura">Cucitura</option>
+                <option value="modifica">Modifica taglia</option>
+                <option value="sostituzione">Sostituzione cerniera</option>
+                <option value="altro">Altro</option>
+            </select>
+            <textarea id="repair-details" placeholder="Dettagli della riparazione" rows="4"></textarea>
+            <button onclick="sendWhatsApp()">Invia Richiesta su WhatsApp</button>
+        </div>
+       
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/annaruvolofashiondesigner/" class="social-button" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/AnnaRuvoloFashionArtist/?locale=it_IT" class="social-button" target="_blank">Facebook</a>
+        </div>
+
+<div style="margin-top: 20px;">
+<a href="i-miei-lavori.html" class="portfolio-button">Scopri le mie creazioni</a>
+</div>
+
+<div class="login-footer">
+<div style="padding-top: 22px;">Copyright © 2025 AnnaRuvoloFashionDesigner - <small>All rights reserved</small>   </div>
+</div>
+
+    </div>
+</body>
+</html>
