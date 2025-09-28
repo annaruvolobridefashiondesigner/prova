@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anna Ruvolo Fashion Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: black;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #e5c29b;
+    }
+
+    /* Spazio sotto la navbar */
+    .container {
+      margin-top: 120px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .inspirational-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    /* Pulsanti social */
+    .social-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      color: #e5c29b;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .social-button:hover {
+      background-color: #444;
+    }
+
+    /* Pulsante Portfolio */
+    .portfolio-button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background-color: black;
+      color: #e5c29b;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .portfolio-button:hover {
+      background-color: #444;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="logo">Anna Ruvolo Fashion Designer</a>
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#corsi">Corsi</a></li>
+      <li><a href="#preventivo">Preventivo</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENUTO -->
+  <div class="container">
+    <img src="https://raw.githubusercontent.com/AnnaRuvoloFashionDesigner/sitoV1/refs/heads/main/logov1.png"
+         alt="Anna Ruvolo Fashion Designer" style="max-width:125px;">
+    <p class="inspirational-text">L’eleganza su misura per il tuo giorno speciale</p>
+
+    <div class="social-buttons">
+      <a href="https://www.instagram.com/annaruvolofashiondesigner/" class="social-button" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/AnnaRuvoloFashionArtist/?locale=it_IT" class="social-button" target="_blank">Facebook</a>
+    </div>
+
+    <a href="i-miei-lavori.html" class="portfolio-button">Scopri le mie creazioni</a>
+
+    <footer>
+      <p>Copyright © 2025 AnnaRuvoloFashionDesigner - All rights reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
